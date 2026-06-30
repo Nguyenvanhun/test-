@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>স্বাগতম</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7fb;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      width: 90%;
+      max-width: 420px;
+      background: #fff;
+      padding: 32px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      color: #0b63d1;
+      font-size: 28px;
+    }
+
+    p {
+      color: #555;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      margin-top: 24px;
+      padding: 16px;
+      background: #0b63d1;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #084fa8;
+    }
+
+    .note {
+      margin-top: 14px;
+      font-size: 13px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>স্বাগতম</h1>
+
+    <p>
+      চালিয়ে যেতে নিচের বোতামে ক্লিক করুন।
+    </p>
+
+    <a class="btn" id="goBtn" href="https://www.azgoiog.vip/?ch=5544dadd97">
+      এখনই প্রবেশ করুন
+    </a>
+
+    <div class="note">
+      পেজ না খুললে আবার বোতামে ক্লিক করুন।
+    </div>
+  </div>
+
+  <script>
+    const btn = document.getElementById("goBtn");
+
+    btn.addEventListener("click", function(e) {
+      const url = btn.getAttribute("href");
+
+      if (!url || url === "YOUR_LINK_HERE") {
+        e.preventDefault();
+        alert("অনুগ্রহ করে সঠিক লিংক সেট করুন।");
+        return;
+      }
+
+      window.location.href = url;
+    });
+  </script>
+
+</body>
+</html>
